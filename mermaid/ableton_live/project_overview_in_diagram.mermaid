@@ -1,0 +1,17 @@
+flowchart LR
+    E --> Master
+    %% PluginName -->|Insert OR Send| TrackName
+    subgraph Master
+        A -->|Insert| B
+        A -->|Send| C
+        A -->|Insert| D
+        %% TrackName In Drums
+        subgraph Drums
+            B
+            C
+        end
+        %% TrackName In SEs
+        subgraph SEs
+            D
+        end
+    end
